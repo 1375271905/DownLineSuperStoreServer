@@ -1,4 +1,4 @@
-# DownLineSuperStoreServer
+# OfflineSuperStoreServer
 # 线下店铺服务
 ## 功能
 ### 扫码出库入库
