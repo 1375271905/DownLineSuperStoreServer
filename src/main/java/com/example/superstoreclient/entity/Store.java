@@ -28,5 +28,7 @@ public class Store {
     @Column(name = "store_phone")
     private String storePhone;
 
+    @Column(name = "is_approved")
+    private Boolean isApproved;
     // getters and setters, constructors, etc.
 }

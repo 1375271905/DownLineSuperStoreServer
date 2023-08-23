@@ -54,7 +54,7 @@ public class StoreController {
         }
     }
 
-    @Operation(summary = "修改店铺信息")
+    @Operation(summary = "根据负责人id修改店铺信息")
     @PutMapping("/update")
     public ResultVO update(@RequestBody Store store){
         if(storeService.storeUpdate(store)){

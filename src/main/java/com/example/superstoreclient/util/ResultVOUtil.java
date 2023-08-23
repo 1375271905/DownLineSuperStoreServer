@@ -15,4 +15,11 @@ public class ResultVOUtil {
         resultVO.setCode(-1);
         return resultVO;
     }
+    public static ResultVO fail(String msg,Object object){
+        ResultVO resultVO = new ResultVO();
+        resultVO.setCode(-1);
+        resultVO.setMsg(msg);
+        resultVO.setData(object);
+        return resultVO;
+    }
 }

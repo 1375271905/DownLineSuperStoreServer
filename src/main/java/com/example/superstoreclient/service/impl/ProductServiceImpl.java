@@ -19,6 +19,7 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements ProductService {
+
     @Autowired
     private ProductMapper productMapper;
     @Override
@@ -158,4 +159,5 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
             return false;
         }
     }
+
 }

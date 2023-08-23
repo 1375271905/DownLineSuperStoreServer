@@ -57,4 +57,12 @@ public class StoreServiceImpl extends ServiceImpl<StoreMapper,Store> implements 
         return isDeleted != 0;
     }
 
+    @Override
+    public Boolean storeIsApprove(Long storeId) {
+        QueryWrapper<Store> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("store_id",storeId);
+        return storeMapper.selectOne(queryWrapper).getIsApproved();
+    }
+
+
 }

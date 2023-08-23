@@ -9,4 +9,5 @@ public interface StoreService extends IService<Store> {
     Long getStoreIdByManagerId(Integer id);
     Boolean storeUpdate(Store store);
     Boolean storeDelete(Integer id);
+    Boolean storeIsApprove(Long id);
 }
