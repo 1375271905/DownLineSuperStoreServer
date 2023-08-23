@@ -72,4 +72,25 @@ public class StoreController {
             return ResultVOUtil.fail();
         }
     }
+    @Operation(summary = "返回所有店铺信息")
+    @GetMapping("/listAll")
+    public ResultVO list(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+                         @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
+        return ResultVOUtil.success(this.storeService.listAll(pageNum,pageSize));
+    }
+
+    @Operation(summary = "返回未通过审核的店铺信息")
+    @GetMapping("/unApprovedStores")
+    public ResultVO unApproveStoresList(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+                                        @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
+        return ResultVOUtil.success(this.storeService.unApprovedStoresList(pageNum,pageSize));
+    }
+
+
+    @Operation(summary = "返回已通过审核的店铺信息")
+    @GetMapping("/isApprovedStores")
+    public ResultVO isApproveStoresList(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum,
+                                        @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
+        return ResultVOUtil.success(this.storeService.isApprovedStoresList(pageNum,pageSize));
+    }
 }
